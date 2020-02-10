@@ -1,0 +1,37 @@
+{
+  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" },
+  "listings": [
+    {
+      "id": 1,
+      "address": {
+        "street": "580 NW Haven St",
+        "city": "Port Saint Lucie",
+        "stateCode": "FL",
+        "zip": "34983"
+      },
+      "photoUrl": "https://static.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISvkzhvw7f5ico0000000000.jpg",
+      "price": 245900,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "floorspace": 1571,
+      "isSaved": false
+    },
+    {
+      "id": 2,
+      "address": {
+        "street": "6 Palo Alto Ln",
+        "city": "Port Saint Lucie",
+        "stateCode": "FL",
+        "zip": "34952"
+      },
+      "photoUrl": "https://static.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISf0p3cgh0ngmp0000000000.jpg",
+      "price": 105000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "floorspace": 1473,
+      "isSaved": false
+    }
+  ]
+}

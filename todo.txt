@@ -1,0 +1,12 @@
+Functionality
+- Route to listing page on searching
+- Search button onClick (field accepts address, city, or zip)
+- Be able to favorite listings
+- Filter on price (min and max)
+- Filter on # of bedrooms
+- Filter on # of bathrooms
+- Filter on city
+- Filter on zip
+
+UI
+- Create listing page - tiles and filter fields
