@@ -1,15 +1,15 @@
 import React from 'react';
-import Hero from './components/Hero';
+import { BrowserRouter } from 'react-router-dom';
+
 import Navigation from './components/Navigation/Navigation';
-import Listings from './components/Listings';
 
 function App() {
   return (
-    <div>
-      <Navigation />
-      <Hero />
-      <Listings/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navigation />
+      </div>
+    </BrowserRouter>
   );
 }
 

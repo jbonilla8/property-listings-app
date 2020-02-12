@@ -1,12 +1,47 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import Hero from '../Hero';
+import Listings from '../Listings';
+import Favorites from '../Favorites';
+
+const Navigation = props => {
+  return (
+    <div>
+      <UnorderedList>
+        <ListItems>
+          <Link to="/">Search</Link>
+        </ListItems>
+        <ListItems>
+          <Link to="/listings">Buy</Link>
+        </ListItems>
+        <ListItems>
+          <Link to="/listings">Rent</Link>
+        </ListItems>
+        <ListItems>
+          <Link to="/favorites">Saved Homes</Link>
+        </ListItems>
+        {/* <NavIcon>
+          <div></div>
+        </NavIcon> */}
+      </UnorderedList>
+
+      <Route path="/" exact component={Hero} />
+      <Route path="/listings" component={Listings} />
+      <Route path="/favorites" component={Favorites} />
+    </div>
+  );
+};
+
+export default Navigation;
 
 const UnorderedList = styled.ul`
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  font-weight: 500;
 `;
 
 const ListItems = styled.li`
@@ -17,30 +52,23 @@ const ListItems = styled.li`
     font-size: 1.2em;
 
     &:hover {
-        color: #e16758;
+      color: #D5A021;
     }
   }
 `;
 
-const Navigation = props => {
-  return (
-    <div>
-      <UnorderedList>
-        <ListItems>
-          <a href="/">Search</a>
-        </ListItems>
-        <ListItems>
-          <a href="/">Buy</a>
-        </ListItems>
-        <ListItems>
-          <a href="/">Rent</a>
-        </ListItems>
-        <ListItems>
-          <a href="/">Saved Homes</a>
-        </ListItems>
-      </UnorderedList>
-    </div>
-  );
-};
+const NavIcon = styled.div`
+  width: 34px;
+  cursor: pointer;
 
-export default Navigation;
+  &:after,
+  &:before,
+  div {
+    background-color: black;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 4px;
+    margin: 6px 0;
+  }
+`;

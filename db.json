@@ -32,6 +32,36 @@
       "bathrooms": 2,
       "floorspace": 1473,
       "isSaved": false
+    },
+    {
+      "id": 3,
+      "address": {
+        "street": "725 SW Hibiscus St",
+        "city": "Port Saint Lucie",
+        "stateCode": "FL",
+        "zip": "34983"
+      },
+      "photoUrl": "https://static.trulia-cdn.com/pictures/thumbs_3/zillowstatic/ISzjll9ded71pd0000000000.jpg",
+      "price": 268000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "floorspace": 1497,
+      "isSaved": false
+    },
+    {
+      "id": 4,
+      "address": {
+        "street": "1052 SW Sudder Ave",
+        "city": "Port Saint Lucie",
+        "stateCode": "FL",
+        "zip": "34953"
+      },
+      "photoUrl": "https://static.trulia-cdn.com/pictures/thumbs_3/zillowstatic/IS7uy83ahfcuv41000000000.jpg",
+      "price": 306150,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "floorspace": 2277,
+      "isSaved": false
     }
   ]
 }
