@@ -43,6 +43,7 @@ export default Listings;
 
 const ListingContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 `;
 
@@ -51,7 +52,7 @@ const StyledListing = styled.div`
   border-radius: 10px;
   line-height: 1.5;
   margin-bottom: 20px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
   cursor: pointer;
 
   &:hover {
@@ -60,7 +61,13 @@ const StyledListing = styled.div`
 `;
 
 const Image = styled.img`
+  width: 100%;
+  max-height: 213px;
   border-radius: 10px 10px 0px 0px;
+
+  @media only screen and (max-width: 600px) {
+    max-height: 140px;
+  }
 `;
 
 const ListingText = styled.div`

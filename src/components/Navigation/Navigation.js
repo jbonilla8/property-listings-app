@@ -52,7 +52,7 @@ const ListItems = styled.li`
     font-size: 1.2em;
 
     &:hover {
-      color: #D5A021;
+      color: #70b77e;
     }
   }
 `;

@@ -60,6 +60,7 @@ const Input = styled.input`
   border-radius: 8px 0px 0px 8px;
   color: #1a3744;
   ::placeholder {
+    font-size: 0.9em;
     color: #586d77;
   }
 `;
@@ -72,10 +73,10 @@ const SearchButton = styled.button`
   border-radius: 0px 8px 8px 0px;
   color: #17262d;
   margin-right: 0px;
-  background-color: #70b77e;
+  background-color: #d5a021;
   cursor: pointer;
 
   &:hover {
-    background-color: #D5A021;
+    background-color: #70b77e;
   }
 `;
