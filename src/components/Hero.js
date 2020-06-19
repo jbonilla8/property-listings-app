@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import MagnifyingGlass from '../images/magnifying glass.png';
 import HeroBackgroundImg from '../images/kitchen.jpeg';
+import { FontFamily } from './Shared/Styles/GlobalStyles';
 
 const Hero = props => {
   return (
     <HeroContainer>
       <HeroInner>
-        <h1>Property Listings Search</h1>
-        <p>Where dream homes come true.</p>
+        <h1>Home Scout</h1>
+        <p>Find your new sweet diggings.</p>
         <SearchContainer>
           <SearchInput
             type="text"
@@ -49,12 +50,13 @@ const HeroInner = styled.div`
   margin-right: 2rem;
 
   h1 {
+    font-family: ${FontFamily.Cabin}, serif;
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-family: 'PT Serif', serif;
+    font-family: ${FontFamily.PTSans}, serif;
     font-size: 1.7em;
     letter-spacing: 2px;
   }
@@ -67,6 +69,7 @@ const SearchContainer = styled.div`
 `;
 
 const SearchInput = styled.input`
+  font-family: ${FontFamily.PTSans};
   font-size: 1.2em;
   padding: 10px;
   margin-top: 20px;
