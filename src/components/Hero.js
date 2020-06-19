@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import MagnifyingGlass from '../images/magnifying glass.png';
+import HeroBackgroundImg from '../images/kitchen.jpeg';
 
 const Hero = props => {
   return (
@@ -7,8 +9,15 @@ const Hero = props => {
       <HeroInner>
         <h1>Property Listings Search</h1>
         <p>Where dream homes come true.</p>
-        <Input type="text" placeholder="Enter an address, city, or ZIP code" />
-        <SearchButton>Search</SearchButton>
+        <SearchContainer>
+          <SearchInput
+            type="text"
+            placeholder="Enter an address, city, or ZIP code"
+          />
+          <SearchButton>
+            <img src={MagnifyingGlass} alt="magnifying glass" />
+          </SearchButton>
+        </SearchContainer>
       </HeroInner>
     </HeroContainer>
   );
@@ -19,11 +28,12 @@ export default Hero;
 const HeroContainer = styled.div`
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('../../img/kitchen.jpeg');
+  background-image: url(${HeroBackgroundImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -35,10 +45,12 @@ const HeroInner = styled.div`
   background: rgba(19, 54, 70, 0.92);
   padding: 40px;
   border-radius: 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 
   h1 {
-    font-size: 2.8em;
-    margin-bottom: 0.5em;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
   }
 
   p {
@@ -48,13 +60,18 @@ const HeroInner = styled.div`
   }
 `;
 
-const Input = styled.input`
-  font-size: 1.5em;
+const SearchContainer = styled.div`
+  display: flex;
+  margin: auto;
+  max-width: 410px;
+`;
+
+const SearchInput = styled.input`
+  font-size: 1.2em;
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-right: 0px;
-  width: 70%;
+  width: 80%;
   background: #fff;
   border: none;
   border-radius: 8px 0px 0px 8px;
@@ -66,17 +83,22 @@ const Input = styled.input`
 `;
 
 const SearchButton = styled.button`
-  font-size: 1.5em;
-  font-weight: 500;
+  width: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px 25px;
   border: none;
   border-radius: 0px 8px 8px 0px;
   color: #17262d;
-  margin-right: 0px;
-  background-color: #d5a021;
+  background-color: #bdbdbd;
   cursor: pointer;
 
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   &:hover {
-    background-color: #70b77e;
+    background-color: #999;
   }
 `;

@@ -6,9 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Navigation />
-      </div>
+      <Navigation />
     </BrowserRouter>
   );
 }

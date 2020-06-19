@@ -17,6 +17,12 @@ const Listings = () => {
   if (listings.length == 0) return false;
   return (
     <Fragment>
+      <FilterContainer>
+        <button type="button">Price</button>
+        <button type="button">Bedrooms</button>
+        <button type="button">Bathrooms</button>
+        <button type="button">Square Feet</button>
+      </FilterContainer>
       <ListingContainer>
         {listings.map(listing => (
           <StyledListing key={listing.id}>
@@ -41,10 +47,47 @@ const Listings = () => {
 
 export default Listings;
 
-const ListingContainer = styled.div`
+const FilterContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin-top: 63px;
+
+  button {
+    color: #555;
+    cursor: pointer;
+    height: 40px;
+    width: 180px;
+    border: 1px solid #d5a021;
+    border-radius: 10px;
+    margin: 40px 20px;
+    font-size: 1em;
+    font-weight: 700;
+
+    &:hover {
+      color: white;
+      background-color: #d5a021;
+    }
+  }
+`;
+
+const ListingContainer = styled.div`
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: auto auto auto auto;
+
+  @media only screen and (max-width: 1280px) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media only screen and (max-width: 985px) {
+    grid-template-columns: auto auto;
+  }
+
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: auto;
+    justify-content: initial;
+    padding: 0 40px;
+  }
 `;
 
 const StyledListing = styled.div`
@@ -64,10 +107,6 @@ const Image = styled.img`
   width: 100%;
   max-height: 213px;
   border-radius: 10px 10px 0px 0px;
-
-  @media only screen and (max-width: 600px) {
-    max-height: 140px;
-  }
 `;
 
 const ListingText = styled.div`
