@@ -39,6 +39,7 @@ const HeroContainer = styled.div`
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  z-index: -1000;
 `;
 
 const HeroInner = styled.div`
@@ -77,9 +78,11 @@ const SearchInput = styled.input`
   width: 80%;
   background: #fff;
   border: none;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 25px 0px 0px 25px;
   color: #1a3744;
+
   ::placeholder {
+    padding-left: 1rem;
     font-size: 0.9em;
     color: #586d77;
   }
@@ -91,7 +94,7 @@ const SearchButton = styled.button`
   margin-bottom: 20px;
   padding: 10px 25px;
   border: none;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 25px 25px 0px;
   color: #17262d;
   background-color: #bdbdbd;
   cursor: pointer;
