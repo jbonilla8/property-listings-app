@@ -135,7 +135,7 @@ const VerticalNavContainer = styled.div`
   -webkit-box-shadow: -10px 0px 35px -18px rgba(0, 0, 0, 1);
   -moz-box-shadow: -10px 0px 35px -18px rgba(0, 0, 0, 1);
   box-shadow: -10px 0px 35px -18px rgba(0, 0, 0, 1);
-  background-color: rgba(189, 189, 189, 0.8);
+  background-color: rgba(189, 189, 189, 0.92);
 `;
 
 const NavItems = styled.div`
